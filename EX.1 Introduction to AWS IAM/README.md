@@ -73,6 +73,6 @@ This lab provided hands-on experience with AWS IAM by demonstrating how organiza
 
 
 ## Author
-**Name:** M YOGESWARI (212224040373)
+**Name:** S.R.AMIRITHA
 **Course:** Introduction to Cloud Computing  
 
