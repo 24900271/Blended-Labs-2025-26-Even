@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: S.R.AMIRITHA
+* **Register Number**: 212224220009
+* **Date of Submission**: 28/05/26
 
 ---
 
@@ -84,11 +84,21 @@ Test the database server by connecting to it locally or remotely and performing 
 
 (Write the steps you followed in your own words)
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+I logged in to the AWS Management Console and launched a new EC2 instance using the Amazon Linux 2 AMI. I selected a suitable instance type (such as t2.micro), created or selected an existing key pair, and configured a security group during the setup process.
+
+I modified the security group settings to allow inbound traffic for SSH (Port 22) from my IP address and enabled the required database port (for example, MySQL – 3306) so that the database server could be accessed when needed.
+
+After the instance was launched, I connected to it from my local machine using SSH with the key pair file: ssh -i mykey.pem ec2-user@<public-ip-address>
+
+Once connected to the instance, I updated the system packages and installed the database server (for example, MySQL) using the package manager: sudo yum update -y
+sudo yum install mysql-server -y
+
+I started the database service and enabled it to start automatically on boot. Then, I secured the installation by setting a root password and configuring basic security settings: sudo systemctl start mysqld
+sudo mysql_secure_installation
+
+After configuring the database server, I logged in to MySQL and created a sample database and table. I inserted a few records into the table using SQL commands such as CREATE DATABASE, CREATE TABLE, and INSERT.
+
+Finally, I tested the database connectivity by logging into the database locally and running SELECT queries to verify that the inserted data was stored and retrieved successfully.
 
 ---
 
@@ -96,19 +106,22 @@ Test the database server by connecting to it locally or remotely and performing 
 
 ### Screenshot 1: EC2 Instance for Database Server
 
-(Insert Screenshot Here)
+<img width="1151" height="751" alt="image" src="https://github.com/user-attachments/assets/dd04025d-976a-407c-a972-9628220cfa5b" />
+
 
 ---
 
 ### Screenshot 2: Database Service Running
 
-(Insert Screenshot Here)
+<img width="1137" height="638" alt="image" src="https://github.com/user-attachments/assets/8f95fbc9-2782-4e08-a362-e547ba968989" />
+
 
 ---
 
 ### Screenshot 3: Sample Database and Table
 
-(Insert Screenshot Here)
+<img width="1145" height="683" alt="image" src="https://github.com/user-attachments/assets/ba30881e-31d3-4938-b7a8-59448f430903" />
+
 
 ---
 
